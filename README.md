@@ -1,7 +1,7 @@
 # DiscordPackager
 Package and locally store everything in a discord server
 
-# HOW TO
+# HOW TO (authorization data)
 
 Step 1: Open discord in a browser and log in
 
@@ -18,4 +18,8 @@ Step 6: Find the "typing" HTTP POST method (as seen in the picture below)
 
 Step 7: Find and copy the value of "Authorization" (also seen in the picture above)
 
-Step 8:
+# HOW TO (Channel id(s))
+
+Step 1: Same as step 1-4 of HOW TO (authorization data) (You need to have opened developer tools before opening discord in your browser)
+Step 2: Find and copy the highlighted value of a HTTP GET method with the name/file name "messages?limit=50" (doesn't have to be limit=50, but it usually is)
+![Channel ID](https://i.imgur.com/ZROOm68.png)
