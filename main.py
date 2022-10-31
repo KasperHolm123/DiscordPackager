@@ -13,8 +13,7 @@ auth_details = os.getenv('AUTH')
 # dotenv approach
 credentials_dotenv = {
     "Authorization": f"{auth_details}",
-    "Server" : "YOUR SERVER DATA",
-    "Channels": {}
+    "Channels": {"506870974315233285"} # 'ting' discord server
 }
 
 # dangerous approach
@@ -26,4 +25,4 @@ credentials = {
 
 if __name__ == "__main__":
     client = packager(credentials_dotenv)
-    client.fetch_content()
+    client.get_texts()
