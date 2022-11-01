@@ -1,5 +1,3 @@
-from email.header import Header
-from re import A
 import requests, json
 
 class packager:
