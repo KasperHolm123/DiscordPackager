@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 # Load environmental variables
 load_dotenv(dotenv_path=".env")
 
+# Amount of messages to fetch
+message_amount = 1
+
 auth_details = os.getenv('AUTH')
 
 # See README.md if you don't know how to get these data
@@ -15,7 +18,7 @@ credentials_dotenv = {
     "Authorization": f"{auth_details}",
     "Channels": {
         "yoinkies": "506870974315233285"
-        } # 'ting' discord server
+        } 
 }
 
 # dangerous approach
@@ -27,4 +30,4 @@ credentials = {
 
 if __name__ == "__main__":
     client = packager(credentials_dotenv)
-    client.get_texts()
+    client.get_texts(message_amount)

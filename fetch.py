@@ -15,9 +15,9 @@ class packager:
         # save them in a folder named after parent channel
         pass
 
-    def get_texts(self):
+    def get_texts(self, amount):
         for channel in self.channels.items():
-            r = requests.get(f'https://discord.com/api/v8/channels/{channel[1]}/messages', headers=self.HEADERS)
+            r = requests.get(f'https://discord.com/api/v8/channels/{channel[1]}/messages?limit={amount}', headers=self.HEADERS)
             json_object = json.loads(r.text)
             for value in json_object:
                 if value['content'] != '':
