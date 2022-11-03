@@ -13,7 +13,9 @@ auth_details = os.getenv('AUTH')
 # dotenv approach
 credentials_dotenv = {
     "Authorization": f"{auth_details}",
-    "Channels": {"506870974315233285"} # 'ting' discord server
+    "Channels": {
+        "yoinkies": "506870974315233285"
+        } # 'ting' discord server
 }
 
 # dangerous approach
