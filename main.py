@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv(dotenv_path=".env")
 
 # Amount of messages to fetch
-message_amount = 1
+message_amount = 5
 
 auth_details = os.getenv('AUTH')
 
@@ -30,4 +30,4 @@ credentials = {
 
 if __name__ == "__main__":
     client = packager(credentials_dotenv)
-    client.get_texts(message_amount)
+    client.fetch_content(message_amount)
